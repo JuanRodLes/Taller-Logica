@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+<body class="Container">
+    <header>
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+                <h1><span class="navbar-brand mb-0">Ejercicio Lógica</span></h1>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Ejercicio 1 -->
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-6 d-flex justify-content-center align-items-center flex-column m-5"> 
+                <h4>Ingrese un número para realizar la sumatoria </h4>
+                <div class="input-group mb-3">
+                    <input type="number" class="form-control" id="numero-ingresado">
+                </div>
+                <button class="btn btn-dark" onclick="sumatoria()">Sumar</button>
+                <h5>La Sumatoria es:</h5><span id="calculo"></span>
+            </div>
+        </div>
+        <!-- Ejercicio 2 -->
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-6 d-flex justify-content-center align-items-center flex-column m-5"> 
+                <h4>Ingrese un número para verificar si es par o impar</h4>
+                <div class="input-group mb-3">
+                    <input type="number" class="form-control" id="numerousuario">
+                </div>
+                <button class="btn btn-dark" onclick="parimpar()">verificar</button>
+                <h5>El número ingresado es:</h5><span id="verificar"></span>
+            </div>
+        </div>
+        
+    </main>
+    <script src="Assets/Js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"crossorigin="anonymous"></script>
+</body>
+
+</html>
