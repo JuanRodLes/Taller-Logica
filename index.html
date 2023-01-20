@@ -10,58 +10,89 @@
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 </head>
 
-<body class="Container">
-    <header>
-        <nav class="navbar bg-body-tertiary">
-            <div class="container-fluid">
-                <h1><span class="navbar-brand m-5">Ejercicio Lógica</span></h1>
-            </div>
-        </nav>
-    </header>
+<body class="Container bg-light">
+    <nav>
+        <div class="container-fluid">
+            <h1><span class="navbar-brand m-5">Ejercicio Lógica JS</span></h1>
+        </div>
+    </nav>
+
     <main>
         <!-- Ejercicio 1 -->
-        <div class="row d-flex justify-content-center align-items-center">
-            <div class="col-6 d-flex justify-content-center align-items-center flex-column m-5">
+        <section class="row d-flex justify-content-center align-items-center">
+            <div class="col-4 d-flex justify-content-center align-items-center flex-column m-5">
                 <h4>Sumatoria </h4>
                 <div class="input-group mb-3">
-                    <input type="number" class="form-control" id="numero-ingresado">
+                    <input type="number" class="form-control " id="numero-ingresado">
                 </div>
-                <button class="btn btn-dark" onclick="sumatoria()">Calcular</button>
+                <button class="btn btn-dark my-2" onclick="sumatoria()">Calcular</button>
                 <h5>El resultado es:</h5><span class="fw-bold" id="calculo"></span>
             </div>
-        </div>
+        </section>
         <!-- Ejercicio 2 -->
-        <div class="row d-flex justify-content-center align-items-center">
-            <div class="col-6 d-flex justify-content-center align-items-center flex-column m-5">
+        <section class="row d-flex justify-content-center align-items-center">
+            <div class="col-4 d-flex justify-content-center align-items-center flex-column m-5">
                 <h4>Par o Impar</h4>
                 <div class="input-group mb-3">
-                    <input type="number" class="form-control" id="numero">
+                    <input type="number" class="form-control" id="NumeroIngresado">
                 </div>
-                <button class="btn btn-dark" onclick="parimpar()">Verificar</button>
+                <button class="btn btn-dark my-2" onclick="parimpar()">Verificar</button>
                 <h5>El número es:</h5><span class="fw-bold" id="verificar"></span>
             </div>
-        </div>
+        </section>
         <!-- Ejercicio 3 -->
-        <div class="row d-flex justify-content-center align-items-center">
-            <div class="col-6 d-flex justify-content-center align-items-center flex-column m-5">
+        <section class="row d-flex justify-content-center align-items-center">
+            <div class="col-4 d-flex justify-content-center align-items-center flex-column m-5">
                 <h4>Pizzería Pepitos</h4>
                 <div class="input-group mb-3">
-                    <p class="fw-bold me-2">Indique su edad</p>
-                    <input type="number" class="form-control" id="edadIngresada">
+                    <input type="number" class="form-control" id="edadIngresada" placeholder="Indique su edad">
                 </div>
                 <div class="d-flex justify-content-center align-items-center">
-                    <p class="fw-bold ">Seleccione su género</p>
-                    <input type="radio" name="genero">Masculino
-                    <input type="radio" name="genero">Femenino
+                    <select class="form-select" id="generos">
+                        <option selected disabled value="none">Indique su género</option>
+                        <option value="Male">Masculino</option>
+                        <option value="Female">Femenino</option>
+                    </select>
                 </div>
                 <div class="d-flex justify-content-center align-items-center flex-column">
-                    <button class="btn btn-dark mt-3" onclick="pizzeria()">Verificar</button>
-                    <span class="fw-bold" id="reclame"></span>
+                    <button class="btn btn-dark my-2" onclick="pizzeria()">Verificar</button>
+                    <span class="fw-bold" id="bebida"></span>
+                    <span class="fw-bold" id="porcion"></span>
                 </div>
             </div>
-        </div>
+        </section>
+        <!-- Ejercicio 5 -->
+        <section class="row d-flex justify-content-center align-items-center">
+            <div class="col-4 d-flex justify-content-center align-items-center flex-column m-5">
+                <h4> Tablas de multiplicar</h4>
+                <div class="input-group">
+                    <input class="form-control" type="number" id="numero1" placeholder="Multiplicado">
+                    <input class="form-control" type="number" id="numero2" placeholder="Multiplicador">
+                </div>
+                <button class="btn btn-dark my-2" onclick="multiplicaciones()">Multiplicar</button>
+                    <span class="fw-bold" id="resultadox"></span>
+            </div>
+        </section>
+        <!-- Ejercicio 6 -->
+        <section class="row d-flex justify-content-center align-items-center">
+            <div class="col-4 d-flex justify-content-center align-items-center flex-column m-5">
+                <h4>Descuentos matrícula</h2>
+                <input class="form-control" type="texto" id="PromedioEstudiante" placeholder="Ingrese su promedio">
+                <button class="btn btn-dark my-2" onclick="Descuento()">validar</button>
+                <b>Su total a pagar por la matrícula es:</b><span class="mb-2" id="DescuentoMatricula"></span>
+            </div>
+        </section>
+        <!-- estilo input number=none -->
+        <style>
+            input[type=number]::-webkit-inner-spin-button,
+            input[type=number]::-webkit-outer-spin-button {
+                -webkit-appearance: none;
+            }
+        </style>
+        <!-- estilo input number=none -->
 
     </main>
+
     <script src="Assets/Js/scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
@@ -69,6 +100,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
         integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
         crossorigin="anonymous"></script>
+
 </body>
 
 </html>
